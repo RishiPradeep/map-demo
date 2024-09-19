@@ -7,7 +7,7 @@ export default function SavedDistances() {
 
   useEffect(() => {
     const getDetails = async () => {
-      const response = await axios.post("http://localhost:3000/getSaved", {
+      const response = await axios.post("http://65.0.176.238:3000/getSaved", {
         username: sessionStorage.getItem("user"),
       });
       setLocations(response.data.details.locations);

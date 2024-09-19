@@ -9,7 +9,7 @@ export default function App() {
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post("http://localhost:3000/login", {
+      const response = await axios.post("http://65.0.176.238:3000/login", {
         username: username,
         password: password,
       });
@@ -24,7 +24,7 @@ export default function App() {
 
   const handleRegister = async () => {
     try {
-      const response = await axios.post("http://localhost:3000/register", {
+      const response = await axios.post("http://65.0.176.238:3000/register", {
         username: username,
         password: password,
       });

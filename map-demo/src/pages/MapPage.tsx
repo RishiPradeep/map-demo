@@ -26,7 +26,7 @@ export default function MapPage() {
       const calculateDistance = async () => {
         try {
           const response = await axios.get(
-            "http://localhost:3000/distance", // Replace with your server's address if different
+            "http://65.0.176.238:3000/distance", // Replace with your server's address if different
             {
               params: {
                 origins: `${markerA.lat},${markerA.lng}`,
@@ -83,9 +83,12 @@ export default function MapPage() {
       };
       console.log("Data to be saved:", data);
       try {
-        const response = await axios.post("http://localhost:3000/saveDetails", {
-          data,
-        });
+        const response = await axios.post(
+          "http://65.0.176.238:3000/saveDetails",
+          {
+            data,
+          }
+        );
         console.log(response.data);
         navigate("/myDistances");
       } catch (error) {
